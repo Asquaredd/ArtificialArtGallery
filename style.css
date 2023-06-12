@@ -103,10 +103,11 @@
     background: var(--text-color);
     color: var(--bg-color);
   }
+
   #sectionPin2 img {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
   
   .pin-wrap2 {
     height: 100vh;
@@ -152,4 +153,14 @@
   
   #smoothScrollSection div {
     overflow: hidden;
+  }
+
+  .linkhref {
+    color: black; /* Initial color */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition properties */
+  }
+
+  .linkhref:hover {
+    color: rgb(242, 110, 110); /* Color on hover */
+    transform: scale(1.2); /* Size increase on hover */
   }

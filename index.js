@@ -2,6 +2,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const pageContainer = document.querySelector(".container");
 
+const scrollTrigger = gsap.registerPlugin(ScrollTrigger);
+
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#scroll-svg",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1
+  }
+});
+
+// Animate the path of the SVG
+tl.to("#scroll-svg path", { duration: 1, attr: { d: "M0,0 L100,100 L0,200 Z" } });
+
+
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
