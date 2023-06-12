@@ -61,6 +61,41 @@
     z-index: 9999;
     
   }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .mouse {
+    width: 35px;
+    height: 55px;
+    border: 2px solid #FFF;
+    border-radius: 25px;
+    position: relative;
+  }
+  
+  .wheel {
+    width: 3px;
+    height: 10px;
+    background: #FFF;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1s ease-in-out infinite;
+  }
+  
+  @keyframes scroll {
+    0%, 100% {
+      top: 20%;
+    }
+    50% {
+      top: 40%;
+    }
+  }
   
  
   .credit {
